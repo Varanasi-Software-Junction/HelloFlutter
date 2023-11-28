@@ -3,65 +3,25 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(VSJApp());
-}
-
-class VSJApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
+  runApp(
+    MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.blueAccent,
         appBar: AppBar(
-          backgroundColor: Colors.teal,
-          title: Card(
-              child: Text(
-            "Quiz App",
-            style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                backgroundColor: Colors.teal,
-                ),
-          )),
+
           centerTitle: true,
+          title:  Text("Varanasi Software Junction"),
+          backgroundColor: Colors.blueGrey,
         ),
-        backgroundColor: Colors.white38,
-        body: Container(
-          padding: EdgeInsets.all(10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Expanded(
-                  child: Center(
-                      child: Text(
-                "Question Will Come Here",
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    backgroundColor: Colors.teal),
-              ))),
-              Expanded(
-                child: FlatButton(
-                  child: Text("Submit True"),
-                  onPressed: () {
-                    print("Submitted True");
-                  },
-                ),
-              ),
-              Expanded(
-                  child: FlatButton(
-                child: FlatButton(
-                  child: Text("Submit False"),
-                  onPressed: () {
-                    print("Submitted False");
-                  },
-                ),
-              ))
-            ],
-          ),
+
+        body:
+
+        Center(child: Image(
+          image: NetworkImage(
+              "https://3.bp.blogspot.com/-py5FbTZgvjo/YDi1bsQq16I/AAAAAAAACB0/BxejbJBcHA4AVfkB33WYC3YlVmxElM7BwCK4BGAYYCw/s1600/Varanasi%2BSoftware%2BJunction%2BPhone%2BLogo.png"),
+        ),
         ),
       ),
-    );
-  }
+    ),
+  );
 }
